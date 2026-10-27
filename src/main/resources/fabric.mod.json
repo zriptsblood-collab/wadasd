@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "caleon_printer",
+  "version": "${version}",
+  "name": "Caleon Printer",
+  "description": "Human-like schematic builder",
+  "environment": "client",
+  "entrypoints": { "client": ["caleon.modules.SchematicBuilder"] },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

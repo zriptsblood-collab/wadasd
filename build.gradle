@@ -1,0 +1,22 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.18.2'
+}
+
+version = project.mod_version
+group = 'caleon'
+base { archivesName = 'caleon-printer' }
+
+repositories { mavenCentral() }
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(25) }
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25 }
